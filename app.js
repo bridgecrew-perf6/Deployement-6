@@ -16,9 +16,9 @@ app.use(
 );
 app.use(cookieParser());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../server/build")));
+app.use(express.static(path.join(__dirname, "../server/build1")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../server/build"));
+  res.sendFile(path.join(__dirname, "../server/build1"));
 });
 app.use("/", require("./routes/user"));
 app.use("/", require("./routes/oauth"));
